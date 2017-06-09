@@ -51,6 +51,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5m9-QN-pTa" kind="presentation" id="2Wy-ZP-jdo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23352236675126903" green="0.23352236675126903" blue="0.23352236675126903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -71,7 +74,7 @@
         <!--Question View Controller-->
         <scene sceneID="eZF-xl-Vgp">
             <objects>
-                <viewController id="5m9-QN-pTa" customClass="QuestionViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" id="5m9-QN-pTa" customClass="QuestionViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gtm-fU-Crc"/>
                         <viewControllerLayoutGuide type="bottom" id="ef7-ok-dxh"/>
@@ -90,7 +93,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-fa-Q2x">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YvB-fa-Q2x">
                                 <rect key="frame" x="16" y="49" width="343" height="128"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -170,15 +173,16 @@
                             <constraint firstItem="Keq-PY-rb8" firstAttribute="centerX" secondItem="89X-bv-0R4" secondAttribute="centerX" id="ymC-kn-JNo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="peZ-zc-IKJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfS-AD-bUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="Hrt-gv-6be">
             <objects>
-                <viewController id="tDd-5B-cQS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" id="tDd-5B-cQS" customClass="ResultViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bgz-hh-o0u"/>
                         <viewControllerLayoutGuide type="bottom" id="Td5-YN-7oW"/>

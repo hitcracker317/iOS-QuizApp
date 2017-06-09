@@ -15,6 +15,7 @@
 		F3E42FB71EEA79E7000A3AFB /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E42FB61EEA79E7000A3AFB /* QuizAppTests.swift */; };
 		F3E42FC21EEA79E7000A3AFB /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E42FC11EEA79E7000A3AFB /* QuizAppUITests.swift */; };
 		F3E42FD01EEA8B3C000A3AFB /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E42FCF1EEA8B3C000A3AFB /* QuestionViewController.swift */; };
+		F3E42FD71EEA9641000A3AFB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E42FD61EEA9641000A3AFB /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F3E42FC11EEA79E7000A3AFB /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		F3E42FC31EEA79E7000A3AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3E42FCF1EEA8B3C000A3AFB /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		F3E42FD61EEA9641000A3AFB /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				F3E42FA11EEA79E6000A3AFB /* AppDelegate.swift */,
 				F3E42FA31EEA79E6000A3AFB /* StartViewController.swift */,
 				F3E42FCF1EEA8B3C000A3AFB /* QuestionViewController.swift */,
+				F3E42FD61EEA9641000A3AFB /* ResultViewController.swift */,
 				F3E42FA51EEA79E6000A3AFB /* Main.storyboard */,
 				F3E42FA81EEA79E6000A3AFB /* Assets.xcassets */,
 				F3E42FAA1EEA79E6000A3AFB /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				F3E42FA41EEA79E6000A3AFB /* StartViewController.swift in Sources */,
 				F3E42FA21EEA79E6000A3AFB /* AppDelegate.swift in Sources */,
 				F3E42FD01EEA8B3C000A3AFB /* QuestionViewController.swift in Sources */,
+				F3E42FD71EEA9641000A3AFB /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
