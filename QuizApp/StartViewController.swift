@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartViewController.swift
 //  QuizApp
 //
 //  Created by MaedaAkira on 2017/06/09.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
