@@ -12,12 +12,10 @@ class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -26,6 +24,7 @@ class StartViewController: UIViewController {
         let questionViewController = segue.destination as! QuestionViewController
         let questionData = QuestionDataManager.sharedInstance.loadNextQuestion()
         questionViewController.question = questionData
+        QuestionDataManager.sharedInstance.correctCount = 0
     }
     
 }

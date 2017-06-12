@@ -10,29 +10,30 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    var questionCount:Int = 0
+    var correctCount:Int = 0
+    
+    @IBOutlet weak var percentLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let percentOfCorrect:Float = calcPercentOfCorrect()
+        percentLabel.text = "\(percentOfCorrect)%"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    func calcPercentOfCorrect() -> Float {
+        let percentOfCorrect:Float = (Float(correctCount) / Float(questionCount)) * 100.0
+        return percentOfCorrect
+    }
 
     @IBAction func backTitle(_ sender: Any) {
-        
+        //タイトル画面に戻る
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

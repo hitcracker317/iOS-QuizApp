@@ -16,6 +16,7 @@ class QuestionDataManager {
     
     var questionDataArray:[QuestionData] = [] //全問題の配列
     var nowQuestionIndex:Int = 0 //現在の問題
+    var correctCount:Int = 0 //正解数
     
     //初期化関数。シングルトンオブジェクトのため外部クラスから参照されないようにprivate修飾子を付与
     private init(){
@@ -61,3 +62,8 @@ class QuestionDataManager {
         return nil
     }
 }
+
+
+
+
+

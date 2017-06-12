@@ -23,7 +23,6 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4Button: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,24 +47,17 @@ class QuestionViewController: UIViewController {
         question.selectedAnwswer = (tapbutton.titleLabel?.text)! //選択した答えを保存
         checkAnswer()
     }
-
-    func checkAnswer() {
-        if question.isCorrect() {
-            //正解！
-            appearQuestionResult(isCorrect: true)
-        } else {
-            //不正解
-            appearQuestionResult(isCorrect: false)
-        }
-    }
     
-    func appearQuestionResult(isCorrect: Bool) {
-        if isCorrect {
+    func checkAnswer() {
+        //正誤判定
+        if question.isCorrect() {
             //正解
             AudioServicesPlayAlertSound(1025)
             
+            QuestionDataManager.sharedInstance.correctCount += 1
+            
             //アニメーション
-            UIView.animate(withDuration: 2.0, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 self.correctImageView.alpha = 1.0
             }) { (Bool) in
                 self.goNextQuestion()
@@ -75,7 +67,7 @@ class QuestionViewController: UIViewController {
             AudioServicesPlayAlertSound(1006)
             
             //アニメーション
-            UIView.animate(withDuration: 2.0, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 self.incorrectImageView.alpha = 1.0
             }) { (Bool) in
                 self.goNextQuestion()
@@ -87,6 +79,8 @@ class QuestionViewController: UIViewController {
         guard let nextQuestion = QuestionDataManager.sharedInstance.loadNextQuestion() else {
             //問題文がなければ、結果画面に遷移する
             if let resultViewController = storyboard?.instantiateViewController(withIdentifier: "result") as? ResultViewController {
+                resultViewController.questionCount = QuestionDataManager.sharedInstance.questionDataArray.count
+                resultViewController.correctCount = QuestionDataManager.sharedInstance.correctCount
                 present(resultViewController, animated: true, completion: nil)
             }
             return
@@ -94,9 +88,9 @@ class QuestionViewController: UIViewController {
         
         //問題文がある場合は次の問題へ遷移する
         //storyboardのIdentifierで設定した値を設定してviewControllerインスタンスを作成する
-        
         if let nextViewController = storyboard?.instantiateViewController(withIdentifier: "question") as? QuestionViewController {
             nextViewController.question = nextQuestion
+            
             
             //segueを利用しない画面遷移
             present(nextViewController, animated: true, completion: nil)
