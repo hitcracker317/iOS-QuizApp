@@ -22,6 +22,9 @@ class ResultViewController: UIViewController {
     }
     
 
+    @IBAction func backTitle(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 
